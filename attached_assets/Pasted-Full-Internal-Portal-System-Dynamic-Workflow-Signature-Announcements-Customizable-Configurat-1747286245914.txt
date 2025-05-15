@@ -1,0 +1,207 @@
+Full Internal Portal System — Dynamic Workflow + Signature + Announcements + Customizable Configuration + Testing + Deployment,
+Create the full ready build of the application as ready zip file include all the preresquiest and required files and evrything to be ready for deploy and publish after testing on afresh Windows server 2022 and using MS SQL Database
+
+🧭 Objective
+Develop internal portal system for a group of companies to manage all types of operational requests, approvals, and forms — including onboarding, IT, HR, and finance — with digital signatures, Microsoft SSO, announcements, email integration, document pushing, admin panel, and full testing, packaged for offline deployment on a fresh Windows Server 2022 with MS SQL Server.
+the system should use MS SQL as Database
+
+✅ Core Features
+🔧 Dynamic Form & Request Builder
+Admin can create any request type (IT, HR, Access, etc.)
+
+Define fields, types, conditions, and required approvals
+
+Allow file attachments, comments, SLA triggers
+
+🔁 Workflow Automation Engine
+Multi-step logic-based routing and approval chains
+
+Conditional logic for routing, escalation, SLA enforcement
+
+Supports parallel approvals and rejections
+
+Make sure that application is using MS SQL as database
+
+
+🛠️ Admin Control Panel
+Manage:
+
+Request types
+
+Workflows & conditions
+
+Users & roles
+
+Homepage links
+
+Announcements
+
+Visual editor for forms and workflow paths
+
+🔐 Microsoft SSO (SSO Integration)
+Microsoft Entra ID (Azure AD) via SAML or OAuth2
+
+Role-based access control
+
+✍️ Digital Signature Integration
+Adobe Sign and/or DocuSign
+
+Used within workflows or for pushed documents
+
+Track signature status and auto-store signed files
+
+📧 Microsoft 365 Email Integration
+Notifications (request status, signature, workflow updates)
+
+Approval/reject actions via email
+
+Push documents (e.g., NDA) to users for completion
+
+📣 Announcements & Notifications
+Admins can post announcements:
+
+Title, body, attachments, target audience
+
+Dashboard + email delivery
+
+Track read/unread status
+
+📤 Push Documents to Users
+Admin can assign documents/forms to users (e.g., NDA)
+
+Sent via email
+
+Auto-sign workflow + archive in user profile
+
+🏠 Homepage with Services
+Configurable tabs/tiles linking to internal and external systems
+
+Group by department or business unit
+
+Managed via Admin Portal
+
+🧾 User File Archive
+Every user has a digital folder:
+
+Signed NDAs
+
+Submitted documents
+
+Audit logs
+
+Stored in SQL & optionally on file system
+
+🧰 System Configuration (NEW)
+Build a config.yaml or .env-like central configuration file for system-wide customization, including:
+
+Parameter	Description
+APP_PORT	Port for hosting the backend (e.g., 7001)
+ATTACHMENT_PATH	Directory where file uploads are stored
+LOG_PATH	Directory for error logs
+SIGNATURE_PROVIDER	Choose between 'adobe', 'docusign'
+ENABLE_EMAIL_APPROVALS	Toggle email-based approvals
+USE_SSO	Enable/disable Microsoft Entra ID authentication
+MAX_ATTACHMENT_SIZE_MB	Limit size of uploaded files
+DB_CONNECTION_STRING	Connection string for MS SQL Server
+DEPLOY_ENV	production, development, or staging
+
+Configuration must be loaded dynamically at runtime, enabling the application to run on different servers without code changes.
+
+💾 Tech Stack
+Backend: Python (FastAPI or Django)
+
+Frontend: React.js or Vue.js SPA
+
+Database: Microsoft SQL Server
+
+Authentication: Microsoft Entra ID (SSO: SAML/OAuth2)
+
+Email: Microsoft 365 / Graph API or SMTP
+
+Signature: Adobe Sign / DocuSign
+
+Deployment: Windows Server (IIS or Python Windows Service)
+
+📦 Deliverables
+✅ Source code (backend, frontend)
+
+✅ Microsoft SQL DB schema + seed data
+
+✅ Fully automated test suite (unit + integration)
+
+✅ Final offline Windows deployment package:
+
+.zip or .exe installer
+
+Includes all libraries (no internet required)
+
+Works on IIS or as standalone Windows Service
+
+✅ config.yaml or .env for customization
+
+✅ Admin/User documentation
+
+✅ Sample test data & usage scripts
+
+✅ All signature keys/API configs sample structure
+
+🧪 Testing (Required Before Build)
+Layer	Tests
+Backend	Unit tests: form logic, workflows, DB transactions
+Frontend	UI tests: form submission, status flows, responsiveness
+Integration	SSO login, signature completion, workflow routing
+Email	Delivery + approval links + bounced handling
+Push & Sign	NDA document push → sign → archive
+Database	Validations, triggers, archival, error logging
+Deployment	IIS & EXE install on sandbox Windows Server
+
+📁 Modular Breakdown
+Module	Description
+Request Engine	Submission, validation, attachments
+Workflow Orchestrator	Condition-based approval routing + escalations
+Admin Portal	Manage forms, workflows, users, roles, settings
+Announcement Module	Broadcast messages + email push + tracking
+Document Pusher	Targeted document push with signature request
+Signature Handler	Adobe/DocuSign logic and status updates
+SSO Connector	Secure Microsoft Entra login with role assignment
+Email Integration	Notifications + email approvals
+Homepage UI	Configurable tiles for external/internal system links
+File Archive	Store user-signed and uploaded documents
+Config Manager	Load and validate config.yaml or env variables
+Logger	Write logs to file + SQL DB + optional admin alerts
+Test Suite	Complete testing coverage with reports
+Deployment Builder	Offline installer + port binding + config injection
+
+🎨 UI Design
+Fully responsive (mobile-first)
+
+Tabs: Home, Requests, Approvals, Documents, Admin, Announcements
+
+Dashboard with KPIs (optional), latest requests, announcements
+
+Dark/light theme optional
+
+🖥️ Deployment Requirements
+Fresh Windows Server 2022+
+
+MS SQL Server (Express or full edition)
+
+Run via:
+
+IIS reverse proxy to localhost:<APP_PORT>
+
+OR Windows Service from .exe
+
+Offline installation via setup script or packaged EXE
+
+No downloads during install
+
+📑 Summary
+Deliver a fully modular, tested, and packaged internal system for workflow automation, announcements, digital signing, Microsoft integration, and complete configuration via external config file — ready for deployment on Windows Server using MS SQL.
+
+very important Notes:
+
+the full package of the application with all the scripts to guide for publishing as ready build
+
+the full guide and instractions and full DB Quries to create to the MS SQL and Give me the full details Guide and instractions to publish the application on a fresh windows server 2022
+create the full ready build of the application as ready zip file include all the preresquiest and required files and evrything to be ready for deploy and publish after testing on afresh Windows server 2022
